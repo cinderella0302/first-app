@@ -12,10 +12,10 @@ export function SignInCard() {
     const [email, setEmail] = useState("")
 
     return (
-        <div className="flex flex-col items-center justify-center w-1/3 border border-gray-200 p-4 rounded-md bg-blue-50 h-full">
-            <div>
-                <div className="mb-8">
-                    <Image src={logoPic} width={100} height={100} alt="GFE Foundation logo" />
+        <div className="flex flex-col items-center justify-center w-1/2 border border-gray-200 p-4 rounded-md h-full gap-5">
+            <div className="flex flex-row items-center justify-center gap-3 mb-5">
+                <div className="flex items-center justify-center">
+                    <Image src={logoPic} width={50} height={50} alt="GFE Foundation logo" />
                 </div>
                 <p className="text-center text-2xl sm:text-3xl">
                     Welcome to{"  "} 
@@ -23,9 +23,10 @@ export function SignInCard() {
                 </p>
             </div>
 
-            <div className="mt-8 flex flex-col gap-3 w-full">
-                <div>
-                    <Button color="default" variant="bordered" startContent={<FcGoogle size={20} />} className="w-full mb-4">
+            <div className="flex flex-col w-full gap-3">
+                <div className="flex flex-row items-center justify-center">
+                    <FcGoogle className="flex p-1" size={35} />
+                    <Button className="flex text-lg">
                         Continue with Google
                     </Button>
                 </div>
@@ -36,7 +37,7 @@ export function SignInCard() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
-                <br/>
+                
                 <label>Password</label>
                 <input type="password" />
                 <Button type="submit" className="w-full bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]">

@@ -1,8 +1,12 @@
-import { redirect } from "next/navigation";
-
-
-
+// import { redirect } from "next/navigation";
+import Header from "../components/header";
+import About from "./about/page";
 
 export default function Page() {
-  redirect(`/signin`)
+  return (
+    <div className="main-wrapper relative">
+      <About />
+    </div>
+  )
+  // redirect('/about');
 }

@@ -27,10 +27,15 @@ function Header() {
                 ))}
             </ul>
 
-            <div>
+            <div className="flex flex-row gap-3">
                 <Link href="/signin">
                     <p className="bg-gradient-to-r from-[#2D79FF] to-[#22B4FD] text-white p-2 rounded-md">
                         Sign In
+                    </p>
+                </Link>
+                <Link href="/signup">
+                    <p className="bg-gradient-to-r from-[#2D79FF] to-[#22B4FD] text-white p-2 rounded-md">
+                        Sign Up
                     </p>
                 </Link>
             </div>

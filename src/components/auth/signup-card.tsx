@@ -7,7 +7,7 @@ import logoPic from "@/public/images/round-logo.png"
 import { FcGoogle } from "react-icons/fc"
 import { useRouter } from "next/router"
 
-export function SignInCard() {
+export function SignUpCard() {
     // const router = useRouter()
     const [email, setEmail] = useState("")
 

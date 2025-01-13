@@ -1,12 +1,12 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextRequest, NextResponse } from "next/server";
 
-
-async function handler(req: NextApiRequest, res: NextApiResponse){
-    console.log("----- debug: test");
-
-    if (req.method === 'GET') {
-        res.status(200).json({ name: 'John Doe' });
-    }
+export async function GET(req: NextRequest) {
+    return NextResponse.json(
+        {
+            message: "Hello, world!"
+        },
+        {
+            status: 200
+        }
+        );
 }
-
-export default handler;
